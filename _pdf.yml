@@ -1,0 +1,58 @@
+pdf:
+  - basedir: ""
+    filename: FIPS201
+    template: _pdftemplate/template.tex
+    workdir: _pdf
+    graphics: 
+      - _FIPS201/images/
+      - _pdftemplate/images/
+    sections:
+        - name: cover
+          template: _pdftemplate/cover.tex
+        - name: toc
+          template: _pdftemplate/toc.tex
+        - name: frontmatter
+          parts: 
+              - content: _FIPS201/foreword.md
+                template: _pdftemplate/foreword.tex
+              - content: _FIPS201/abstract.md
+                template: _pdftemplate/abstract.tex
+              - content: _FIPS201/announcement.md
+                template: _pdftemplate/announcement.tex
+          part_template: _pdftemplate/sectionpart.tex
+          template: _pdftemplate/frontmatter.tex
+        - name: body
+          parts:
+              - _FIPS201/introduction.md
+              - _FIPS201/requirements.md
+              - _FIPS201/system.md
+              - _FIPS201/frontend.md
+              - _FIPS201/keymanagement.md
+              - _FIPS201/authentication.md
+              - _FIPS201/federation.md
+          part_template: _pdftemplate/sectionpart.tex
+          template: _pdftemplate/body.tex
+        - name: appendix
+          parts:
+              - _FIPS201/accreditation.md
+              - _FIPS201/oid.md
+              - _FIPS201/glossary.md
+              - _FIPS201/references.md
+              - _FIPS201/revisions.md
+          part_template: _pdftemplate/sectionpart.tex
+          template: _pdftemplate/appendix.tex
+    doi_url: https://doi.org/10.6028/NIST.FIPS.201-3
+    issued_date: October 2021
+    long_doc_number: Federal Information Processing Standards Publication 201-3
+    doc_short_title: FIPS PUB 201-3
+    page_doc_number: FIPS 201-3
+    page_title: Personal Identity Verification (PIV)
+    display_title: Personal Identity Verification (PIV)\\of Federal Employees and Contractors
+    title: Personal Identity Verification (PIV) of Federal Employees and Contractors
+    author: 'National Institute of Standards and Technology'
+    subject: "This document establishes a standard for a Personal Identity Verification (PIV) system that meets the control and security objectives of Homeland Security Presidential Directive-12. It is based on secure and reliable forms of identity credentials issued by the Federal Government to its employees and contractors. These credentials are used by mechanisms that authenticate individuals who require access to federally controlled facilities, information systems, and applications. This Standard addresses requirements for initial identity proofing, infrastructure to support interoperability of identity credentials, and accreditation of organizations and processes issuing PIV credentials."
+    language: 'en-US'
+    lineno: false
+    supersedes: FIPS 201-2
+    category: Information Security
+    subcategory: Identity
